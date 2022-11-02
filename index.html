@@ -450,6 +450,23 @@
             </li>
           </ul>
         </div>
+        <form class="subscribe">
+          <div class="subscribe-wrapper">
+            <label class="subscribe-label" for="user_email">Підпишіться на розсилку</label>
+            <div class="subscribe-group">
+              <input
+                class="subscribe-input"
+                type="email"
+                placeholder="E-mail"
+                name="email"
+                id="user_email"
+              />
+              <button class="subscribe-button" type="submit" aria-label="Кнопка підписатися">
+                Підписатися
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </footer>
     <div class="backdrop" data-modal>
@@ -465,42 +482,55 @@
           </svg>
         </button>
 
-        <form name="registration_form">
-          <label>
-            User name
-            <input type="text" name="user_name" placeholder="Andrew Black" minlength="3" />
-          </label>
-          <label>
-            User phone
-            <input type="tel" name="user_tel" />
-          </label>
-          <label>
-            User mail
-            <input type="text" name="user_mail" />
-          </label>
-          <p>Choose a color:</p>
-          <label>
-            <input type="radio" name="color" value="red" />
-            Red
-          </label>
-          <label>
-            <input type="radio" name="color" value="white" />
-            White
-          </label>
-          <label>
-            <input type="radio" name="color" value="green" />
-            Green
-          </label>
-          <textarea name="" id="" rows="15"></textarea>
+        <form name="registration-form">
+          <p class="registration-title">Залиште свої дані, ми вам передзвонимо</p>
+
+          <div class="input-wrapper">
+            <label class="registration-label" for="user_name">Ім'я</label>
+            <div class="input-field">
+              <input class="registration-input" type="text" name="user_name" id="user_name" />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./assets/images/svg/icons.svg#icon-person-black"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label class="registration-label" for="user_tel">Телефон</label>
+            <div class="input-field">
+              <input class="registration-input" type="tel" name="user_tel" id="user_tel" />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./assets/images/svg/icons.svg#icon-phone-black"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label class="registration-label" for="user_mail">Пошта</label>
+            <div class="input-field">
+              <input class="registration-input" type="email" name="user_mail" id="user_mail" />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./assets/images/svg/icons.svg#icon-email-black"></use>
+              </svg>
+            </div>
+          </div>
+
+          <label class="registration-label" for="user_comment">Коментар</label>
+          <textarea
+            class="registration-input registration-comment"
+            placeholder="Введіть текст"
+            name="user_comment"
+            id="user_comment"
+          ></textarea>
+
           <label class="form-checkbox">
             <input class="checkbox visually-hidden" type="checkbox" name="" />
-            <svg class="icon" width="20" height="20">
-              <use class="one" href="./assets/images/svg/icons.svg#instagram-icon"></use>
-              <use class="two" href="./assets/images/svg/icons.svg#twitter-icon"></use>
+            <svg class="registration-icon" width="20" height="20">
+              <use class="icon-unchecked" href="./assets/images/svg/icons.svg#icon-check1"></use>
+              <use class="icon-checked" href="./assets/images/svg/icons.svg#icon-check2"></use>
             </svg>
-            policy
+            Погоджуюся з розсилкою та приймаю
+            <a>Умови договору</a>
           </label>
-          <button type="submit">Submit</button>
+          <button class="registration-button" type="submit">Відправити</button>
         </form>
       </div>
     </div>
