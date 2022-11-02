@@ -451,25 +451,23 @@
           </ul>
         </div>
         <form class="subscribe">
-          <div class="subscribe-wrapper">
-            <label class="subscribe-label" for="user_email">Підпишіться на розсилку</label>
-            <div class="subscribe-group">
-              <input
-                class="subscribe-input"
-                type="email"
-                placeholder="E-mail"
-                name="email"
-                id="user_email"
-              />
-              <button class="subscribe-button" type="submit" aria-label="Кнопка підписатися">
-                Підписатися
-              </button>
-            </div>
+          <label class="subscribe-label" for="user_email">Підпишіться на розсилку</label>
+          <div class="subscribe-group">
+            <input
+              class="subscribe-input"
+              type="email"
+              placeholder="E-mail"
+              name="email"
+              id="user_email"
+            />
+            <button class="subscribe-button" type="submit" aria-label="Кнопка підписатися">
+              Підписатися
+            </button>
           </div>
         </form>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button
           class="modal-close-button"
@@ -485,32 +483,82 @@
         <form name="registration-form">
           <p class="registration-title">Залиште свої дані, ми вам передзвонимо</p>
 
-          <div class="input-wrapper">
-            <label class="registration-label" for="user_name">Ім'я</label>
-            <div class="input-field">
-              <input class="registration-input" type="text" name="user_name" id="user_name" />
-              <svg class="input-icon" width="18" height="18">
-                <use href="./assets/images/svg/icons.svg#icon-person-black"></use>
-              </svg>
-            </div>
+          <label class="registration-label" for="user_name">Ім'я</label>
+          <div class="input-field">
+            <input
+              class="registration-input"
+              type="text"
+              name="user_name"
+              id="user_name"
+              placeholder="&nbsp;"
+              required
+              minlength="3"
+            />
+            <svg class="input-icon" width="18" height="18">
+              <use href="./assets/images/svg/icons.svg#icon-person-black"></use>
+            </svg>
+            <svg class="input-icon-alert" width="18" height="18">
+              <use
+                class="input-icon-success"
+                href="./assets/images/svg/icons.svg#icon-success"
+              ></use>
+              <use
+                class="input-icon-warning"
+                href="./assets/images/svg/icons.svg#icon-warning"
+              ></use>
+            </svg>
           </div>
-          <div class="input-wrapper">
-            <label class="registration-label" for="user_tel">Телефон</label>
-            <div class="input-field">
-              <input class="registration-input" type="tel" name="user_tel" id="user_tel" />
-              <svg class="input-icon" width="18" height="18">
-                <use href="./assets/images/svg/icons.svg#icon-phone-black"></use>
-              </svg>
-            </div>
+
+          <label class="registration-label" for="user_tel">Телефон</label>
+          <div class="input-field">
+            <input
+              class="registration-input"
+              type="tel"
+              name="user_tel"
+              id="user_tel"
+              placeholder="+38 096 111 11 11"
+              required
+              minlength="12"
+              maxlength="12"
+            />
+            <svg class="input-icon" width="18" height="18">
+              <use href="./assets/images/svg/icons.svg#icon-phone-black"></use>
+            </svg>
+            <svg class="input-icon-alert" width="18" height="18">
+              <use
+                class="input-icon-success"
+                href="./assets/images/svg/icons.svg#icon-success"
+              ></use>
+              <use
+                class="input-icon-warning"
+                href="./assets/images/svg/icons.svg#icon-warning"
+              ></use>
+            </svg>
           </div>
-          <div class="input-wrapper">
-            <label class="registration-label" for="user_mail">Пошта</label>
-            <div class="input-field">
-              <input class="registration-input" type="email" name="user_mail" id="user_mail" />
-              <svg class="input-icon" width="18" height="18">
-                <use href="./assets/images/svg/icons.svg#icon-email-black"></use>
-              </svg>
-            </div>
+
+          <label class="registration-label" for="user_mail">Пошта</label>
+          <div class="input-field">
+            <input
+              class="registration-input"
+              type="email"
+              name="user_mail"
+              id="user_mail"
+              placeholder="example@mail.com"
+              required
+            />
+            <svg class="input-icon" width="18" height="18">
+              <use href="./assets/images/svg/icons.svg#icon-email-black"></use>
+            </svg>
+            <svg class="input-icon-alert" width="18" height="18">
+              <use
+                class="input-icon-success"
+                href="./assets/images/svg/icons.svg#icon-success"
+              ></use>
+              <use
+                class="input-icon-warning"
+                href="./assets/images/svg/icons.svg#icon-warning"
+              ></use>
+            </svg>
           </div>
 
           <label class="registration-label" for="user_comment">Коментар</label>
@@ -523,12 +571,12 @@
 
           <label class="form-checkbox">
             <input class="checkbox visually-hidden" type="checkbox" name="" />
-            <svg class="registration-icon" width="20" height="20">
+            <svg class="registration-icon" width="16" height="15">
               <use class="icon-unchecked" href="./assets/images/svg/icons.svg#icon-check1"></use>
               <use class="icon-checked" href="./assets/images/svg/icons.svg#icon-check2"></use>
             </svg>
             Погоджуюся з розсилкою та приймаю
-            <a>Умови договору</a>
+            <a class="registration-link" href="#">Умови договору</a>
           </label>
           <button class="registration-button" type="submit">Відправити</button>
         </form>

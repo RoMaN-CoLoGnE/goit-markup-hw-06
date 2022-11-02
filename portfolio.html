@@ -286,67 +286,83 @@
     </main>
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-container">
-          <div class="footer-contacts">
-            <a class="footer-logo" href="./index.html">
-              Web<span class="logo-part">Studio</span>
-            </a>
-            <address class="footer-address">
-              <ul class="footer-list">
-                <li class="footer-item">
-                  <a
-                    class="footer-link link-map"
-                    href="https://goo.gl/maps/8viNXfXdV3uJQZfFA"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                  >
-                    м. Київ, пр-т Лесі Українки, 26
-                  </a>
-                </li>
-                <li class="footer-item">
-                  <a class="footer-link" href="mailto:info@devstudio.com"> info@devstudio.com </a>
-                </li>
-                <li class="footer-item">
-                  <a class="footer-link" href="tel:+380961111111"> +38 096 111 11 11 </a>
-                </li>
-              </ul>
-            </address>
-          </div>
-          <div class="social-wrapper">
-            <h2 class="social-title">приєднуйтесь</h2>
-            <ul class="social-list">
-              <li class="social-item">
-                <a class="social-link footer-social-link" href="#">
-                  <svg class="social-icon" width="20px" height="20px">
-                    <use href="./assets/images/svg/icons.svg#instagram-icon"></use>
-                  </svg>
+      <div class="container footer-container">
+        <div class="footer-contacts">
+          <a class="footer-logo" href="./index.html"> Web<span class="logo-part">Studio</span> </a>
+          <address class="footer-address">
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a
+                  class="footer-link link-map"
+                  href="https://goo.gl/maps/8viNXfXdV3uJQZfFA"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  м. Київ, пр-т Лесі Українки, 26
                 </a>
               </li>
-              <li class="social-item">
-                <a class="social-link footer-social-link" href="#">
-                  <svg class="social-icon" width="20px" height="20px">
-                    <use href="./assets/images/svg/icons.svg#twitter-icon"></use>
-                  </svg>
-                </a>
+              <li class="footer-item">
+                <a class="footer-link" href="mailto:info@devstudio.com"> info@devstudio.com </a>
               </li>
-              <li class="social-item">
-                <a class="social-link footer-social-link" href="#">
-                  <svg class="social-icon" width="20px" height="20px">
-                    <use href="./assets/images/svg/icons.svg#facebook-icon"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-item">
-                <a class="social-link footer-social-link" href="#">
-                  <svg class="social-icon" width="20px" height="20px">
-                    <use href="./assets/images/svg/icons.svg#linkedin-icon"></use>
-                  </svg>
-                </a>
+              <li class="footer-item">
+                <a class="footer-link" href="tel:+380961111111"> +38 096 111 11 11 </a>
               </li>
             </ul>
-          </div>
+          </address>
         </div>
+        <div class="social-wrapper">
+          <p class="social-title">приєднуйтесь</p>
+          <ul class="social-list">
+            <li class="social-item">
+              <!-- Добавить aria-label -->
+              <a
+                class="social-link footer-social-link"
+                href="#"
+                aria-label="Посилання на Instagram"
+              >
+                <svg class="social-icon" width="20px" height="20px">
+                  <use href="./assets/images/svg/icons.svg#instagram-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link footer-social-link" href="#">
+                <svg class="social-icon" width="20px" height="20px">
+                  <use href="./assets/images/svg/icons.svg#twitter-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link footer-social-link" href="#">
+                <svg class="social-icon" width="20px" height="20px">
+                  <use href="./assets/images/svg/icons.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link footer-social-link" href="#">
+                <svg class="social-icon" width="20px" height="20px">
+                  <use href="./assets/images/svg/icons.svg#linkedin-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <form class="subscribe">
+          <label class="subscribe-label" for="user_email">Підпишіться на розсилку</label>
+          <div class="subscribe-group">
+            <input
+              class="subscribe-input"
+              type="email"
+              placeholder="E-mail"
+              name="email"
+              id="user_email"
+            />
+            <button class="subscribe-button" type="submit" aria-label="Кнопка підписатися">
+              Підписатися
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
   </body>

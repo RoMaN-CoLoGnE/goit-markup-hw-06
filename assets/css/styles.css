@@ -528,8 +528,7 @@ img {
 }
 
 .subscribe {
-  margin-left: 93px;
-  width: 100%;
+  margin-left: auto;
 }
 
 .subscribe-group {
@@ -548,7 +547,7 @@ img {
 .subscribe-input {
   margin-right: 12px;
   padding: 15px 16px;
-  width: 100%;
+  width: 358px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -558,8 +557,12 @@ img {
 }
 
 .subscribe-button {
-  position: relative;
-  padding: 10px 62px 10px 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 10px 28px;
   color: var(--basic-white-color);
   background-color: var(--basic-blue-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -573,16 +576,13 @@ img {
 }
 
 .subscribe-button::after {
-  position: absolute;
-  top: 13px;
-  right: 28px;
+
   content: "";
   display: block;
   width: 24px;
   height: 24px;
   background-image: url(../images/png/icon-send.png);
   color: var(--basic-white-color);
-
 }
 
 /* Portfolio styles */
@@ -734,7 +734,7 @@ img {
 
   min-width: 528px;
   min-height: 581px;
-  padding: 30px;
+  padding: 40px;
 
   background-color: var(--basic-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -802,40 +802,85 @@ input {
   color: var(--basic-grey-color);
 }
 
-.input-wrapper {
-  margin-bottom: 10px;
-
-}
-
 .input-field {
   position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.input-field:hover .input-icon {
-  fill: var(--basic-blue-color);
+  margin-bottom: 10px;
 }
 
 .registration-input {
-  padding: 12px 12px 12px 42px;
+  padding: 12px 42px;
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  color: var(--registration-comment-color);
-  cursor: pointer;
+  outline: transparent;
+
+  transition: border-color var(--animation-timing-function);
 }
 
-.registration-input:hover,
+
 .registration-input:focus {
   border-color: var(--basic-blue-color);
 }
 
+.registration-input::placeholder {
+  color: var(--registration-comment-color);
+  opacity: 0;
+  transition: opacity var(--animation-timing-function);
+}
+
+.registration-input:focus::placeholder {
+  opacity: 1;
+}
+
 .input-icon {
   position: absolute;
-  top: 14px;
-  left: 15px;
-  fill: var(--basic-black-color)
+
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: var(--basic-black-color);
+
+  pointer-events: none;
+
+  transition: fill var(--animation-timing-function);
+}
+
+.registration-input:focus+.input-icon {
+  fill: var(--basic-blue-color);
+}
+
+.input-icon-alert {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+.input-icon-success,
+.input-icon-warning {
+  opacity: 0;
+  transform: scale(0.3);
+  transform-origin: center;
+  transition: opacity 150ms ease-in, transform 150ms ease-in;
+}
+
+.input-icon-success {
+
+  fill: rgb(74, 191, 10);
+}
+
+.registration-input:not(:placeholder-shown):required:valid~.input-icon-alert .input-icon-success {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.input-icon-warning {
+  fill: rgb(244, 209, 12);
+}
+
+.registration-input:not(:placeholder-shown):required:invalid~.input-icon-alert .input-icon-warning {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .comment-input {
@@ -852,12 +897,18 @@ input {
   resize: none;
 }
 
+.registration-comment::placeholder {
+  opacity: 1;
+  color: var(--icon-gray-color);
+}
+
 .form-checkbox {
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
+  user-select: none;
 }
 
 .icon-unchecked {
@@ -878,6 +929,12 @@ input {
   opacity: 0;
 }
 
+.registration-link {
+  text-decoration: underline;
+  color: var(--basic-blue-color);
+  text-underline-position: under;
+}
+
 .registration-button {
   display: block;
   margin: auto auto;
@@ -885,11 +942,19 @@ input {
 
   font-weight: 700;
   line-height: 1.9;
+  letter-spacing: 0.06em;
   color: var(--basic-white-color);
-  background-color: var(--secondary-blue-color);
+  background-color: var(--basic-blue-color);
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  transition: background-color var(--animation-timing-function);
+}
+
+.registration-button:hover,
+.registration-button:focus {
+  background-color: var(--secondary-blue-color);
 }
