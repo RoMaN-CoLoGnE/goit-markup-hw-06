@@ -63,7 +63,14 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
+          <button
+            class="hero-button"
+            type="button"
+            aria-label="Кнопка відкриття вікна реєстрації"
+            data-modal-open
+          >
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!-- Features -->
@@ -416,7 +423,6 @@
           <p class="social-title">приєднуйтесь</p>
           <ul class="social-list">
             <li class="social-item">
-              <!-- Добавить aria-label -->
               <a
                 class="social-link footer-social-link"
                 href="#"
@@ -479,7 +485,7 @@
             <use href="./assets/images/svg/icons.svg#icon-close"></use>
           </svg>
         </button>
-
+        <!--  -->
         <form name="registration-form">
           <p class="registration-title">Залиште свої дані, ми вам передзвонимо</p>
 
@@ -518,8 +524,8 @@
               id="user_tel"
               placeholder="+38 096 111 11 11"
               required
-              minlength="12"
-              maxlength="12"
+              minlength="6"
+              maxlength="15"
             />
             <svg class="input-icon" width="18" height="18">
               <use href="./assets/images/svg/icons.svg#icon-phone-black"></use>
@@ -570,7 +576,7 @@
           ></textarea>
 
           <label class="form-checkbox">
-            <input class="checkbox visually-hidden" type="checkbox" name="" />
+            <input class="checkbox visually-hidden" type="checkbox" name="registration_checkbox" />
             <svg class="registration-icon" width="16" height="15">
               <use class="icon-unchecked" href="./assets/images/svg/icons.svg#icon-check1"></use>
               <use class="icon-checked" href="./assets/images/svg/icons.svg#icon-check2"></use>
